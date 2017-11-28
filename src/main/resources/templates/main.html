@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body style="background-color: black">
+<main class="container" style="padding-top: 100px">
+
+    <div class="row">
+    <div class="col-md-4"  th:each="module : ${modules}">
+        <th:block th:if="${module.isVisible()}"  th:with="currentModule=${module}">
+            <div th:replace="|fragments/${module.name()}|">&nbsp;</div>
+        </th:block>
+    </div>
+    </div>
+</main>
+</body>
+</html>
