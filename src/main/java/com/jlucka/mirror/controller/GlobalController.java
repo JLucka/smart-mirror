@@ -3,14 +3,10 @@ package com.jlucka.mirror.controller;
 import com.jlucka.mirror.service.ModulesService;
 import com.jlucka.mirror.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.jws.soap.SOAPBinding;
 
 @RestController
 public class GlobalController {

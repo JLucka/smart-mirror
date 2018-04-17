@@ -1,16 +1,21 @@
 package com.jlucka.mirror.module;
 
+import com.jlucka.mirror.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TestModule implements MirrorModule {
+public class ComplimentsModule implements MirrorModule {
 
     private boolean isVisible;
     private final String name;
+    private UserService userService;
 
-    public TestModule() {
-        this.name = "test_module";
+    @Autowired
+    public ComplimentsModule(UserService userService) {
+        this.name = "compliments_module";
         this.isVisible = true;
+        this.userService = userService;
     }
 
     @Override
@@ -31,5 +36,9 @@ public class TestModule implements MirrorModule {
     @Override
     public void show() {
         this.isVisible = true;
+    }
+
+    public String getGreeting() {
+        return "Hello" + userService.getUser();
     }
 }

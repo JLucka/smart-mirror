@@ -3,13 +3,13 @@ package com.jlucka.mirror.module;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AModule implements MirrorModule {
+public class ClockModule implements MirrorModule {
 
     private boolean isVisible;
     private final String name;
 
-    public AModule() {
-        this.name = "a_module";
+    public ClockModule() {
+        this.name = "clock_module";
         this.isVisible = true;
     }
 
