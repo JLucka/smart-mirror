@@ -33,4 +33,8 @@ public class HelpModule implements MirrorModule {
         this.isVisible = true;
     }
 
+    @Override
+    public int order() {
+        return 9;
+    }
 }

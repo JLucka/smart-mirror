@@ -38,7 +38,12 @@ public class ComplimentsModule implements MirrorModule {
         this.isVisible = true;
     }
 
-    public String getGreeting() {
+    public String getCompliment() {
         return "Hello" + userService.getUser();
+    }
+
+    @Override
+    public int order() {
+        return 4;
     }
 }

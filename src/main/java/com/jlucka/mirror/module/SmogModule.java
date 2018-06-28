@@ -51,4 +51,8 @@ public class SmogModule implements MirrorModule {
         this.isVisible = true;
     }
 
+    @Override
+    public int order() {
+        return 2;
+    }
 }

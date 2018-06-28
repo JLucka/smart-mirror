@@ -1,4 +1,4 @@
-<div class="row"  xmlns:th="http://www.thymeleaf.org">
+<div class="row">
     <p id="clock" class="text-white" style="font-size: 60pt"></p>
 </div>
 

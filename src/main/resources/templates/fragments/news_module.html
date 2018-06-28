@@ -1,8 +1,0 @@
-<div class="row" xmlns:th="http://www.thymeleaf.org">
-    <h5 class="text-white">News</h5>
-        <div th:if="${currentModule.getArticles() != null}">
-            <ul>
-                <li th:each="article : ${currentModule.getArticles()}" th:text="${article.title}" class="text-white"></li>
-            </ul>
-        </div>
-</div>

@@ -47,4 +47,9 @@ public class NewsModule implements MirrorModule {
         Collections.shuffle(articles);
         return articles.subList(0, 4);
     }
+
+    @Override
+    public int order() {
+        return 8;
+    }
 }

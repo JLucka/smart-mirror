@@ -4,15 +4,18 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.hidetake:gradle-ssh-plugin:2.9.0")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'org.hidetake.ssh'
 
 group = 'com.jlucka'
 version = '0.0.1-SNAPSHOT'
@@ -24,9 +27,32 @@ repositories {
 
 
 dependencies {
+	compile('org.springframework.boot:spring-boot-starter-freemarker')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("com.fasterxml.jackson.core:jackson-databind")
 	compile group: 'net.aksingh', name: 'owm-japis', version: '2.5.2.2'
+	compile group: 'org.webjars', name: 'jquery', version: '3.2.1'
+	compile group: 'org.webjars', name: 'webjars-locator'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+remotes {
+	pi {
+		host = '192.168.0.250'
+		user = 'pi'
+		password = 'pimalinka'
+	}
+}
+
+task deployToPi {
+	group 'deploy'
+	doLast {
+		println ssh.version
+		ssh.run {
+			session(remotes.pi) {
+				put from: jar.archivePath.path, into: '/home/pi'
+			}
+		}
+	}
 }

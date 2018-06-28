@@ -32,4 +32,9 @@ public class CommuteModule implements MirrorModule {
     public void show() {
         this.isVisible = true;
     }
+
+    @Override
+    public int order() {
+        return 5;
+    }
 }

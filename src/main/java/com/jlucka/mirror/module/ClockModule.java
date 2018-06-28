@@ -32,4 +32,9 @@ public class ClockModule implements MirrorModule {
     public void show() {
         this.isVisible = true;
     }
+
+    @Override
+    public int order() {
+        return 1;
+    }
 }

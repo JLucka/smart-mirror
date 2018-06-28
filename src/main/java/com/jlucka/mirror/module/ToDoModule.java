@@ -33,4 +33,8 @@ public class ToDoModule implements MirrorModule {
         this.isVisible = true;
     }
 
+    @Override
+    public int order() {
+        return 7;
+    }
 }

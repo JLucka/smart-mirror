@@ -43,15 +43,15 @@ public class WeatherModule implements MirrorModule {
     public String getIcon() throws APIException {
         CurrentWeather weather = weatherService.getCurrentWeather();
         String prefix = "wi wi-";
-        Integer code = weather.getRespCode();
+        Integer code = weather.getWeatherList().get(0).getConditionId();
         String icon = weatherService.getIconTextForCode(code);
-
-        if (!(code > 699 && code < 800) && !(code > 899 && code < 1000)) {
-            icon = "day-" + icon;
-        }
 
         return prefix + icon;
     }
 
+    @Override
+    public int order() {
+        return 10;
+    }
 }
 
