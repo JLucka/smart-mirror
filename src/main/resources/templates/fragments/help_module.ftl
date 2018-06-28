@@ -1,6 +1,12 @@
-<div class="card">
-    <div class="card-body">
-        <h4 class="card-title">Pomoc</h4>
-        <p class="card-text">Testowy moduł taki fajny</p>
-    </div>
+<div class="text-white">
+    <h4>Some things I can help you with</h4>
+    <ul>
+        <li>Weather</li>
+        <li>Clock</li>
+        <li>Compliments</li>
+        <li>News</li>
+        <li>Quotes</li>
+        <li>Smog</li>
+        <li>To Do</li>
+    </ul>
 </div>

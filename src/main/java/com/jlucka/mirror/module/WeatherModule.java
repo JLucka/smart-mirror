@@ -49,6 +49,11 @@ public class WeatherModule implements MirrorModule {
         return prefix + icon;
     }
 
+    public Double getTemperature() throws APIException {
+        CurrentWeather weather = weatherService.getCurrentWeather();
+        return weather.getMainData().getTemp();
+    }
+
     @Override
     public int order() {
         return 10;
