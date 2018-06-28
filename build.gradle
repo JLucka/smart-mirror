@@ -31,6 +31,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("com.fasterxml.jackson.core:jackson-databind")
+	compile group: 'org.webjars', name: 'font-awesome', version: '5.1.0'
 	compile group: 'net.aksingh', name: 'owm-japis', version: '2.5.2.2'
 	compile group: 'org.webjars', name: 'jquery', version: '3.2.1'
 	compile group: 'org.webjars', name: 'webjars-locator'

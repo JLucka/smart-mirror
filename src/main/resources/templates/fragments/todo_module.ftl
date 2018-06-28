@@ -1,5 +1,3 @@
-<div class="card">
-    <div class="card-body">
-        <h4 class="card-title">Do zrobienia</h4>
-    </div>
+<div class="text-white">
+    <h4 class="card-title">Things to do</h4>
 </div>
