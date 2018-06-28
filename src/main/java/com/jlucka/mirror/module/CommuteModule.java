@@ -19,7 +19,7 @@ public class CommuteModule implements MirrorModule {
     }
 
     @Override
-    public String name() {
+    public String getName() {
         return name;
     }
 

@@ -24,7 +24,7 @@ public class ComplimentsModule implements MirrorModule {
     }
 
     @Override
-    public String name() {
+    public String getName() {
         return name;
     }
 

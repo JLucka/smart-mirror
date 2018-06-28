@@ -28,7 +28,7 @@ public class NewsModule implements MirrorModule {
     }
 
     @Override
-    public String name() {
+    public String getName() {
         return name;
     }
 

@@ -5,7 +5,7 @@ public interface MirrorModule {
 
     int order();
 
-    String name();
+    String getName();
 
     void hide();
 

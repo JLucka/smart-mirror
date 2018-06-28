@@ -7,7 +7,7 @@ public class UserService {
     private String user;
 
     public String getUser() {
-        return user != null ? user : "Test";
+        return user != null ? user : "Guest";
     }
 
     public void setUser(String user) {

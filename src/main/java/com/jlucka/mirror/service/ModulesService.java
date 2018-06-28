@@ -34,7 +34,7 @@ public class ModulesService {
 
     public void changeStatusForModule(String module) {
         Optional<MirrorModule> mirrorModule = modules.stream()
-                .filter(it -> it.name().split("_")[0].equals(module)).findFirst();
+                .filter(it -> it.getName().split("_")[0].equals(module)).findFirst();
         if(mirrorModule.isPresent()) {
             if (mirrorModule.get().isVisible()) {
                 mirrorModule.get().hide();

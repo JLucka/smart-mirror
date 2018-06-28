@@ -1,10 +1,13 @@
 package com.jlucka.mirror.controller;
 
+import com.jlucka.mirror.module.MirrorModule;
 import com.jlucka.mirror.service.ModulesService;
 import com.jlucka.mirror.service.ReloadService;
 import com.jlucka.mirror.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class GlobalController {
@@ -46,5 +49,10 @@ public class GlobalController {
     @RequestMapping("/reload-check")
     public boolean reloadCheck() {
         return reloadService.checkAndClear();
+    }
+
+    @RequestMapping("/modules")
+    public List<MirrorModule> getModules() {
+        return modulesService.getModules();
     }
 }

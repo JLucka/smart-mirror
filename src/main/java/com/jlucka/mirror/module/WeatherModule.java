@@ -26,7 +26,7 @@ public class WeatherModule implements MirrorModule {
     }
 
     @Override
-    public String name() {
+    public String getName() {
         return name;
     }
 

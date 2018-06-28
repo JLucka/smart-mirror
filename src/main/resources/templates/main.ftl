@@ -21,7 +21,7 @@
         <#if module.isVisible()>
            <div class="col-md-4 widget">
                <#assign currentModule=module>
-               <#include "fragments/" + module.name() + ".ftl">
+               <#include "fragments/" + module.getName() + ".ftl">
            </div>
         <#else>
             <div class="col-md-4 widget">

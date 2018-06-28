@@ -19,7 +19,7 @@ public class ClockModule implements MirrorModule {
     }
 
     @Override
-    public String name() {
+    public String getName() {
         return name;
     }
 
